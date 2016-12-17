@@ -1,0 +1,17 @@
+{
+  "bridge" : {
+    "name" : "Homebridge",
+    "username" : "CC:22:3D:E3:CE:32",
+    "port" : 51826,
+    "pin" : "031-45-155"
+  },
+  "accessories" : [
+    {
+      "accessory" : "Sonoff",
+      "name" : "Sonoff Switch",
+      "description" : "Sonoff MQTT ON/OFF switch",
+      "mqtt_broker" : "192.168.1.21",
+      "mqtt_channel " : "/sonoff"
+    }
+  ]
+}
