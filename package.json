@@ -1,24 +1,24 @@
 {
-  "name": "homebridge-sonoff",
-  "version": "0.0.1",
-  "description": "Sonoff Control plugin for Homebridge",
-  "main": "index.js",
-  "author": "Matej Sychra",
-  "license": "ISC",
-  "dependencies": {
-    "mdns": "^2.3.3",
-    "mqtt": "^2.0.1",
-    "request": "^2.79.0"
+  "name" : "homebridge-sonoff",
+  "version" : "0.0.1",
+  "description" : "Sonoff Control plugin for Homebridge",
+  "main" : "index.js",
+  "author" : "Matej Sychra",
+  "license" : "ISC",
+  "dependencies" : {
+    "mdns" : "^2.3.3",
+    "mqtt" : "^2.0.1",
+    "request" : "^2.79.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/suculent/homebridge-plugin-sonoff.git"
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/suculent/homebridge-plugin-sonoff.git"
   },
-  "keywords": [
+  "keywords" : [
     "homebridge-plugin"
   ],
-  "engines": {
-    "node": ">=0.12.0",
-    "homebridge": ">=0.2.0"
+  "engines" : {
+    "node" : ">=0.12.0",
+    "homebridge" : ">=0.2.0"
   }
 }
