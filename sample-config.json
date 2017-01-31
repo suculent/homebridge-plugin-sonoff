@@ -10,8 +10,8 @@
       "accessory" : "Sonoff",
       "name" : "Sonoff Switch",
       "description" : "Sonoff MQTT ON/OFF switch",
-      "mqtt_broker" : "192.168.1.21",
-      "mqtt_channel " : "/sonoff"
+      "mqtt_broker" : "mqtt://192.168.1.21",
+      "mqtt_channel" : "/sonoff"
     }
   ]
 }
