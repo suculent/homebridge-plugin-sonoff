@@ -6,7 +6,6 @@
   "author" : "Matej Sychra",
   "license" : "ISC",
   "dependencies" : {
-    "mdns" : "^2.3.3",
     "mqtt" : "^2.0.1",
     "request" : "^2.79.0"
   },
