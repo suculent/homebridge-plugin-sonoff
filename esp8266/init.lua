@@ -38,7 +38,7 @@ function mqttAct()
     tmr.alarm(5, 50, 0, function() gpio.write(mqttLed, gpio.HIGH) end)
 end
  
-m = mqtt.Client("Sonoff-" .. deviceID, 180, mqttUser, mqttPass)
+m = mqtt.Client("Sonoff-" .. deviceID, 180, mqtt_user, mqtt_pass)
 m:lwt("/lwt", "Sonoff " .. deviceID, 0, 0)
 m:on("offline", function(con)
     ip = wifi.sta.getip()
@@ -72,9 +72,9 @@ end)
 -- Update status to MQTT
 function mqtt_update()
     if (gpio.read(relayPin) == 0) then
-        m:publish("/sonoff/state","OFF",0,0)
+        m:publish(mqtt_channel .. "/state","OFF",0,0)
     else
-        m:publish("/sonoff/state","ON",0,0)
+        m:publish(mqtt_channel .. "/state","ON",0,0)
     end
 end
   
@@ -100,8 +100,8 @@ end)
 -- Subscribe to MQTT
 function mqtt_sub()
     mqttAct()
-    m:subscribe("/sonoff",0, function(conn)
-        print("MQTT subscribed to /sonoff")
+    m:subscribe(mqtt_channel,0, function(conn)
+        print("MQTT subscribed to " .. mqtt_channel )
         pwm.setup(mqttLed, 1, 512)
         pwm.start(mqttLed)
     end)
