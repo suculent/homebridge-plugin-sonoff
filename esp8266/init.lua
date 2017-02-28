@@ -10,11 +10,6 @@
 dofile("config.lua")
 
 mqttBroker = mqtt_broker 
-mqttUser = "none"
-mqttPass = "none"
- 
-deviceID="bugzapper"
-roomID="1"
  
 -- Pin which the relay is connected to
 relayPin = 6
@@ -33,6 +28,8 @@ gpio.write(mqttLed, gpio.LOW)
 
 wifi.setmode(wifi.STATION)
 wifi.sta.config (wifi_ssid, wifi_password)
+
+deviceID = node.chipid();
  
 -- Make a short flash with the led on MQTT activity
 function mqttAct()
